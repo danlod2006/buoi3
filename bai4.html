@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 4</title>
+		<meta charset="utf-8" />
+	</head>
+	<script>
+		function KiemTra()
+		{
+			var tdn = f.TDN.value;
+			var mk = f.MK.value;
+			var nlmk = f.NLMK.value;
+			if(tdn == "" || mk == "" || nlmk == "")
+			{	
+				alert('Các ô bắt buộc phải nhập');
+				return false;
+			}
+			if(tdn.length < 6)
+			{
+			  alert('Tên đăng nhập không đc nhỏ hơn 6 kí tự');
+			  return false;
+			}
+			if(mk != nlmk)
+			{
+			  alert('Mật khẩu nhập lại không khớp');
+			  return false;
+			}
+			
+		  return true;
+		}
+	</script>
+	<body>
+		<form name =f>
+			<table>
+			<tr>
+				<td>Tên Đăng Nhập</td>
+				<td><input type="text" name="TDN" > (Nhiều hơn 6 kí tự)</td>
+			</tr>
+			<tr>
+				<td>Mật Khẩu</td>
+				<td><input type="password" name="MK" ></td>
+			</tr>
+			<tr>
+				<td>Nhập Lại Mật Khẩu</td>
+				<td><input type="password" name="NLMK" ></td>
+			</tr>
+			</table>
+			<button type ="submit" onclick="return KiemTra()">Kiểm Tra</button>
+		</form>
+	</body>
+</html>
